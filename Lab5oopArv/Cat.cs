@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace Lab5oopArv
 {
     internal class Cat : Animal
     {
-        public Cat(string name, int age, string typeOfAnimal, string owner, string sound) : base(name, age, typeOfAnimal, owner, sound)
+        public string Food { get; set; }
+        public string Bed { get; set; }
+        public Cat(string name, int age, string typeOfAnimal, string owner, string sound, string food, string bed) : base(name, age, typeOfAnimal, owner, sound)
         {
+            Food = food;
+            Bed = bed;
         }
 
         public override void MakeSound()
@@ -16,7 +21,11 @@ namespace Lab5oopArv
         }
         public override void Eat()
         {
-            Console.WriteLine($"{Name} gillar att äta  till middag");
+            Console.WriteLine($"{Name} gillar att äta {Food} till middag");
+        }
+        public virtual void FavoriteBed()
+        {
+            Console.WriteLine($"{Name}s favorit plats att sova på är {Bed}");
         }
     }
 }

@@ -12,7 +12,8 @@
             //myDog.Eat();
             //myDog.FavoriteToy();
 
-            CreateDogs();
+            //CreateDogs();
+            CreateCats();
         }
 
         private static void CreateDogs()
@@ -28,6 +29,14 @@
             bulldog.MakeSound();
             bulldog.Eat();
             bulldog.FavoriteToy();
+        }
+        private static void CreateCats()
+        {
+            Cat myCat = new Cat("Mona", 4, "Katt", "Nathalie", "Jamar", "Lax", "Soffan");
+            myCat.PrintInfo();
+            myCat.MakeSound();
+            myCat.Eat();
+            myCat.FavoriteBed();
         }
     }
 }
